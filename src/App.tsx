@@ -1,7 +1,10 @@
+import { RouterProvider } from "react-router-dom";
+import { Router } from "./routers/router";
+
 function App() {
   return (
     <>
-      <div>My Profile App</div>
+      <RouterProvider router={Router} />
     </>
   );
 }
