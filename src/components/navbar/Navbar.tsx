@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import NavItem from "./components/navItem/NavItem";
 import { NAV_LINKS } from "./constants/navLinks";
 import { RiMenuLine, RiCloseLine } from "@remixicon/react";
+import { ROUTES } from "../../routers/routes";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -40,10 +41,10 @@ export default function Navbar() {
 
           {/* Contact (Desktop) */}
           <Link
-            to="/contact"
+            to={ROUTES.CONTACT_ME}
             className="hidden md:block border-s border-[#90A1B9] px-8 text-nowrap py-4"
           >
-            _contact-me
+            Contact-me
           </Link>
 
           {/* Burger (Mobile Only) */}
@@ -81,11 +82,11 @@ export default function Navbar() {
           ))}
 
           <Link
-            to="/contact"
+            to={ROUTES.CONTACT_ME}
             onClick={() => setOpen(false)}
             className="border-t border-[#90A1B9] px-8 py-4"
           >
-            _contact-me
+            Contact-me
           </Link>
         </div>
       </div>
